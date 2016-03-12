@@ -1,0 +1,29 @@
+<!-- 
+
+  INSTRUCTIONS FOR MODIFYING _NAV.HTML
+  ====================================
+  
+  If the full content of subpages are shown when we view the parent, there's no need for them to be accessible in the navigation.
+  
+  Replace these lines in the _nav.html template file:
+
+  {% if child.leaf? or child.nav_children.size == 0 %}
+  <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+    <a href="{{ child.url }}">{{ child.name }}</a>
+  </li>
+  {% else %}
+  
+  with the code below:
+  
+-->
+
+{% assign child_tags_list = "" %}
+{% for tag in child.tags %}
+  {% assign child_tags_list = tag.name | downcase | remove: ":" | remove: "-" | replace: " ","-" | append: " " | append: child_tags_list %} 
+{% endfor %}
+
+{% if child.leaf? or child.nav_children.size == 0 or child_tags_list contains "layout-scrolling" %}
+<li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+  <a href="{{ child.url }}">{{ child.name }}</a>
+</li>
+{% else %}
