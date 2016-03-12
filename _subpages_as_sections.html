@@ -1,0 +1,23 @@
+<div class="subpage-sections">
+  {% for child in page.nav_children %}
+  <div class="subpage-section {% if child.has_meta_image? %} with-image{% endif %}" {% if child.has_meta_image? %}style="background-image: url({{ child.meta_image_url }});"{% endif %}>
+    <div class="subpage-section-title" data-bablic-exclude>{{ child.name }}</div>
+    
+    <div class="subpage-section-content" data-bablic-exclude>
+      {% if child.type_slug == 'basic' %}
+        {{ child.basic.content }}
+      {% elsif child.type_slug == 'blog_post' %}
+        {{ child.blog_post.content }}
+      {% elsif child.type_slug == 'event' %}
+        {% subpage child with "event" %}
+      {% elsif child.type_slug == 'endorsement' %}
+        {{ child.endorsement.content }}
+      {% elsif child.type_slug == 'signup' %}
+        {% subpage child with "signup_form_detailed" %}
+      {% else %}
+        {{ child.excerpt }}
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

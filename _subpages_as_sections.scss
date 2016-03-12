@@ -1,0 +1,58 @@
+.subpage-section {
+  padding: 2em 1em;
+//   border-bottom: 2px solid white;
+  background: transparent;
+  position: relative;
+  min-height: 90vh;
+  .subpage-section-title {
+    font-size: .75em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    color: #999;
+    display: none;
+    visibility: hidden;
+  }
+  .subpage-section-content {
+    h1 {
+      font-size: 48px !important;
+      line-height: 48px !important;
+    }
+    p, ul, ol {
+      font-size: 18px !important;
+      line-height: 24px !important;
+    }
+  }
+}
+
+.subpage-section.with-image {
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0px 0px 24px rgba(0,0,0,.5);
+}
+
+@media only screen and (min-width: 1140px) {
+  
+  .subpage-section {
+    padding: 6em 4em;
+    .subpage-section-content {
+      width: 1026px; /* 1140px - 10% for margins */
+      margin: 0 auto;
+      h1 {
+        font-size: 72px !important;
+        line-height: 72px !important;
+      }
+      p, ul, ol {
+        font-size: 32px !important;
+        line-height: 48px !important;
+      }
+    }
+  }
+  
+  .subpage-section.with-image {
+    background-attachment: fixed;
+  }
+  
+}
