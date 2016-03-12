@@ -3,6 +3,39 @@
   INSTRUCTIONS FOR MODIFYING LAYOUT.HTML
   ======================================
   
+  There are three locations in the layout page that need to be modified:
+  
+  1. Before the <body> tag (to detect and CSS classes for page tags)
+  2. Inside main content area (to include a loop of subpages if the layout-scrolling tag is detected)
+  3. Before the </body> tag (to insert scripts for fancy cinematic text and detecting scroll events) 
+
+-->
+
+<!--
+
+  STEP 1: BEFORE THE BODY TAG
+  ===========================
+  
+  Where you see the 
+  
+  <body class="aware-theme v2-theme" ...
+  
+  replace it with the code below:
+  
+-->
+
+{% assign page_tags_list = "" %}
+{% for tag in page.tags %}
+  {% assign page_tags_list = tag.name | downcase | remove: ":" | remove: "-" | replace: " ","-" | append: " " | append: page_tags_list %}
+{% endfor %}
+
+<body class="aware-theme v2-theme {{ page.page_class_name }} {{ page_tags_list }} js {% if page.is_homepage? %}home{% endif %} {{ site.slug }}">
+
+<!--
+
+  STEP 2: INSIDE THE MAIN CONTENT AREA
+  ====================================
+  
   Where your NationBuilder layout.html file says 
   
   {% if request.is_sidebar? %}
@@ -12,8 +45,8 @@
   {% endif %}
   
   replace it with the code below:
-  
-  -->
+
+-->
 
 {% if page.tags contains "layout_scrolling" and page.has_children? %}
 
@@ -31,7 +64,10 @@
 
 <!--
 
-  Also replace
+  STEP 3: ABOVE THE </BODY> TAG
+  =============================
+  
+  Finally, replace
   
   </body>
   
