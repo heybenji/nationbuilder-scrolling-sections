@@ -1,3 +1,4 @@
+{% if page_tags_list contains "layout-scrolling" and page.has_children? %}
 <!-- Vendor scripts for Subpages as Sections -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script>
@@ -6,3 +7,4 @@
 
 <!-- Custom script to initialize Subpages as Sections -->
 <script type="text/javascript" src="subpages-as-sections.js"></script>
+{% endif %}
