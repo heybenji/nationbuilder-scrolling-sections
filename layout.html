@@ -1,0 +1,30 @@
+<!-- 
+  
+  INSTRUCTIONS FOR LAYOUT.HTML
+  ============================
+  
+  Where your NationBuilder layout.html file says 
+  
+  {% if request.is_sidebar? %}
+  {% include "columns_2" %}
+  {% else %}
+  {% include "columns_1" %}            
+  {% endif %}
+  
+  replace it with the code below:
+  
+  -->
+
+{% if page.tags contains "layout_scrolling" and page.has_children? %}
+
+  {% subpage page with "subpages_as_sections" %}
+
+{% else %}
+
+  {% if request.is_sidebar? %}
+  {% include "columns_2" %}
+  {% else %}
+  {% include "columns_1" %}            
+  {% endif %}
+
+{% endif %}
