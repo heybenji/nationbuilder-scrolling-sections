@@ -1,6 +1,5 @@
 .subpage-section {
   padding: 2em 1em;
-//   border-bottom: 2px solid white;
   background: transparent;
   position: relative;
   min-height: 90vh;
@@ -33,6 +32,8 @@
   text-shadow: 0px 0px 24px rgba(0,0,0,.5);
 }
 
+// for larger than tablets
+// puts a width on content to keep line-length readable and also increased font sizes
 @media only screen and (min-width: 1140px) {
   
   .subpage-section {
@@ -51,6 +52,7 @@
     }
   }
   
+  // fixed-position background
   .subpage-section.with-image {
     background-attachment: fixed;
   }
