@@ -11,5 +11,5 @@ It works by basically pulling in subpages as sections of a parent page, and hidi
 1. Create a new page with a scrolling layout, go to the dashboard and click _+ New page,_ and choose _Basic page._
 2. Once the page is created, click Settings in the horizontal tabs for the page (next to Content), and add the tag “Layout: Scrolling”
 3. Next click the Subpages tab and create a new subpage for each section that you want, and always leave the _Include in top nav_ option checked, as this is what allows you change the order in which the sections appear. 
-4. Add a background. You add a background by selecting the “Settings” tab for the subpage you’re editing, then the "Social media" tab under that. Upload the image where it says “Thumbnail image for Facebook, etc.” and save.
-5. Once you’ve got all your sections, it’s time to order them. Edit the parent page that you created in step 1, and choose “Subpages” and then choose “Subnav pages.” Drag them into the order you want. It should save the order automatically.
+4. Add a background. You add a background by selecting the _Settings_ tab for the subpage you’re editing, then the _Social media_ tab under that. Upload the image where it says _Thumbnail image for Facebook, etc._ and save.
+5. Once you’ve got all your sections, it’s time to order them. Edit the parent page that you created in step 1, and choose _Subpages_ from it's tabbed menu and then choose _Subnav pages._ Drag them into the order you want. It should save the order automatically.
