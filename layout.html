@@ -3,17 +3,34 @@
   INSTRUCTIONS FOR MODIFYING LAYOUT.HTML
   ======================================
   
-  There are three locations in the layout.html template file that need to be modified:
+  There are four locations in the layout.html template file that need to be modified:
   
-  1. Before the <body> tag (to detect and CSS classes for page tags)
-  2. Inside main content area (to include a loop of subpages if the layout-scrolling tag is detected)
-  3. Before the </body> tag (to insert scripts for fancy cinematic text and detecting scroll events) 
+  1. Before the </head> tag (to add CSS to make the scrolling pages pretty)
+  2. Before the <body> tag (to detect and CSS classes for page tags)
+  3. Inside main content area (to include a loop of subpages if the layout-scrolling tag is detected)
+  4. Before the </body> tag (to insert scripts for fancy cinematic text and detecting scroll events) 
 
 -->
 
 <!--
 
-  STEP 1: BEFORE THE BODY TAG
+  STEP 1: BEFORE THE </HEAD> TAG
+  ===========================
+  
+  Where you see the 
+  
+  </head>
+  
+  replace it with the code below:
+  
+-->
+
+  <link rel="stylesheet" href="subpages_as_sections.scss" type="text/css">
+</head>
+
+<!--
+
+  STEP 2: BEFORE THE BODY TAG
   ===========================
   
   Where you see the 
