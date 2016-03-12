@@ -6,7 +6,7 @@ Once you've put the files in place, and modified _nav.html and layout.html in yo
 
 ## Creating a scrolling page in NationBuilder
 
-It works by basically pulling in subpages as sections of the parent page. So first you make the parent page and assign a special tag to it. Then you add additional sections as subpages.
+It works by basically pulling in subpages as sections of a parent page. So first you make the parent page and assign a special tag to it. Then you add additional sections as subpages.
 
 1. Create a new page with a scrolling layout, go to the dashboard and click “+ New page," and choose "Basic page."
 2. Once the page is created, click Settings in the horizontal tabs for the page (next to Content), and add the tag “Layout: Scrolling”
