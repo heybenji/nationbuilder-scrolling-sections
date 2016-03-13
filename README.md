@@ -7,7 +7,7 @@ Example files and documentation for implementing immersive scrolling pages in Na
 1. Upload the files inside the `theme-files` folder to your NationBuilder theme.
 2. Modify your NationBuilder theme's existing files in the `theme-modifications` folder according to the instructions in each file.
 
-Once you've put the files in place, and modified `_nav.html` and `layout.html` in your template according to the instructions, you can create your very own immersive scrolling page.
+Once you've put the files in place, and modified your theme's existing files, you can create your very own immersive scrolling page, complete with fixed, full-width background images and cinematic text transitions.
 
 ## Creating a scrolling page in NationBuilder
 
