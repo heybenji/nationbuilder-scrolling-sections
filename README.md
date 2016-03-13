@@ -11,7 +11,7 @@ Once you've put the files in place, and modified your theme's existing files, yo
 
 ## Creating a scrolling page in NationBuilder
 
-The basic concept is to create a parent page, and then create a series of subpages, one for each section. So first you make the parent page and assign a special tag to it. Then you add additional sections as subpages. Finally, you reorder them as if they were in the menu using NationBuilder's concept of _Subnav pages._
+The basic concept is to create a parent page, and then create a series of subpages, one for each section. So first you make the parent page and assign a special tag to it. Then you add additional sections as subpages. Finally, you reorder them using NationBuilder's concept of draggable _Subnav pages._
 
 1. Create a new page with a scrolling layout, go to your NationBuilder's Dashboard and click _+ New page,_ and choose _Basic page._
 2. Once the page is created and add the tag `Layout: Scrolling` using the add tag button below the Author.
